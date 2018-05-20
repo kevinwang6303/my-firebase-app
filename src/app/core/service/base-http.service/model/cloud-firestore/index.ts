@@ -153,7 +153,7 @@ export class DocumentHandler<T> {
           if (a.payload.exists) {
             const ref = a.payload.ref;
             const metadata = a.payload.metadata;
-            const data = a.payload.data();
+            const data = a.payload.data() as any;
             const id = a.payload.id;
             return ({ id, metadata, ref, ...data }) as any;
           }
